@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瀏覽產品細節，體驗 AURA 領先製鞋工藝、規格與材質設計。">
+  <title>產品詳情 | AURA 極致履履</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Product Detail Section -->
+  <section class="detail-section fade-in-up">
+    <div class="container">
+      <!-- Breadcrumb Navigation -->
+      <nav style="margin-bottom: 30px; font-size: 0.9rem; color: var(--text-secondary);">
+        <a href="index.html" style="color: var(--text-muted); hover: var(--accent-gold);">首頁</a> &gt; 
+        <a href="sports-casual.html" id="detail-category-link" style="color: var(--text-muted);">運動休閒鞋</a> &gt; 
+        <span style="color: var(--text-primary);" id="detail-product-name-breadcrumb">產品詳情</span>
+      </nav>
+
+      <!-- Main Detail Grid -->
+      <div class="detail-grid">
+        <!-- Left Column: Product Image Gallery -->
+        <div class="detail-gallery fade-in-up delay-1">
+          <div class="detail-img-box">
+            <img src="" alt="" id="detail-product-img" class="detail-main-img">
+          </div>
+        </div>
+
+        <!-- Right Column: Product Info & Actions -->
+        <div class="detail-content fade-in-up delay-2">
+          <span class="detail-cat" id="detail-category-label">AURA 精選</span>
+          <h1 class="detail-title" id="detail-product-name">載入中...</h1>
+          <div class="detail-price" id="detail-product-price">NT$ 0</div>
+          
+          <p class="detail-desc" id="detail-product-desc">
+            正在為您載入頂級鞋履的工藝美學細節，請稍候...
+          </p>
+
+          <!-- Selectors -->
+          <div class="detail-options">
+            <!-- Color Option -->
+            <div class="option-group">
+              <span class="option-label">顏色: <span id="active-color-name" style="color: var(--accent-gold); margin-left: 5px;">極致黑 (預設)</span></span>
+              <div class="color-selector">
+                <span class="color-dot active" style="background-color: #1a1a1a;" data-color="極致黑" title="極致黑"></span>
+                <span class="color-dot" style="background-color: #e2e8f0;" data-color="簡約灰" title="簡約灰"></span>
+                <span class="color-dot" style="background-color: #c5a059;" data-color="沙岩金" title="沙岩金"></span>
+              </div>
+            </div>
+
+            <!-- Size Option -->
+            <div class="option-group">
+              <span class="option-label">尺寸 (US / 歐碼):</span>
+              <div class="size-selector">
+                <button class="size-btn">US 7</button>
+                <button class="size-btn">US 8</button>
+                <button class="size-btn active">US 9</button>
+                <button class="size-btn">US 10</button>
+                <button class="size-btn">US 11</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Specifications Table -->
+          <div class="glass-panel" style="padding: 20px; margin-bottom: 30px;">
+            <span class="option-label" style="display: block; margin-bottom: 15px;">產品工藝規格:</span>
+            <table class="detail-specs-table">
+              <tbody id="detail-specs-table">
+                <!-- Specs rows inserted dynamically -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Call to Action Buttons -->
+          <div class="detail-cta">
+            <button class="btn btn-primary js-add-to-cart">加入購物車</button>
+            <button class="btn btn-secondary" onclick="alert('點選了立即購買！本網站為展示型網站，暫不提供實際結帳功能。');">立即購買</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="product-grid-section" style="border-top: 1px solid var(--glass-border); padding-top: 80px;">
+    <div class="container">
+      <div class="section-title-wrapper fade-in-up-scroll">
+        <h2 class="section-title" style="font-size: 2rem;">您可能會喜歡</h2>
+        <p class="section-subtitle">為您推薦同系列的尖端科技機能鞋款，豐富您的日常搭配</p>
+      </div>
+
+      <!-- Related Grid -->
+      <div class="grid-layout" id="related-products-grid">
+        <!-- Rendered dynamically by detail.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript Files -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/detail.js"></script>
+  <script>
+    // 同步麵包屑中產品名稱
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(() => {
+        const titleEl = document.getElementById("detail-product-name");
+        const breadcrumbEl = document.getElementById("detail-product-name-breadcrumb");
+        if (titleEl && breadcrumbEl && titleEl.textContent !== "載入中...") {
+          breadcrumbEl.textContent = titleEl.textContent;
+          
+          // 更新分類標籤
+          const labelEl = document.getElementById("detail-category-label");
+          const categoryLink = document.getElementById("detail-category-link");
+          if (labelEl && categoryLink) {
+            labelEl.textContent = categoryLink.textContent;
+          }
+        }
+      }, 50);
+    });
+  </script>
+</body>
+</html>

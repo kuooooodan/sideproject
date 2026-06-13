@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聯絡 AURA 顧客服務團隊。不論是商品諮詢、退換貨申請或商業合作，我們將於 24 小時內為您提供專業回覆。">
+  <title>聯絡我們 | AURA 極致履履</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section fade-in-up">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h1 class="section-title text-gradient">聯絡我們</h1>
+        <p class="section-subtitle">有任何問題或合作意向？歡迎填寫下方表單或透過直接聯繫管道，AURA 團隊將竭誠為您服務。</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-panel fade-in-up delay-1">
+          <div class="contact-card glass-panel">
+            <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-pure); margin-bottom: 20px;">品牌總部資訊</h2>
+            
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-info-content">
+                  <h4>辦公地址</h4>
+                  <p>中華民國台北市大安區敦化南路二段 88 號 18 樓</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-info-content">
+                  <h4>服務專線</h4>
+                  <p>02-2708-8888 (週一至週五 09:00 - 18:00)</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-info-content">
+                  <h4>電子郵件</h4>
+                  <p>service@aurafootwear.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Styled Map Placeholder -->
+          <div class="contact-map-placeholder">
+            <span style="font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); z-index: 2;">AURA 台北旗艦總部</span>
+            <div class="map-glow-dot"></div>
+            <!-- Background simulated grid design for map feel -->
+            <div style="position: absolute; width: 100%; height: 100%; background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0); background-size: 20px 20px; opacity: 0.5;"></div>
+          </div>
+        </div>
+
+        <!-- Contact Form Panel -->
+        <div class="contact-form-panel glass-panel fade-in-up delay-2">
+          <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-pure); margin-bottom: 30px;">發送線上訊息</h2>
+          
+          <form onsubmit="event.preventDefault(); alert('感謝您的來信！AURA 服務團隊將於 24 小時內與您聯繫。'); this.reset();">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">您的姓名</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="請輸入姓名..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">電子郵件</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="請輸入信箱..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">主旨</label>
+              <input type="text" id="contact-subject" class="form-control" placeholder="請輸入訊息主旨..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">訊息內容</label>
+              <textarea id="contact-message" class="form-control" placeholder="請輸入詳細內容..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">送出訊息</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript Files -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
